@@ -20,8 +20,10 @@ public interface IRepository {
 	
 	public List<IPerson> toList();
 	
+	//Should not use toList method
 	public void sortBy(Comparator<IPerson> comparator );
 	
+	//Should not use toList method
 	public IRepository searchBy(Predicate<IPerson> condition);
 	
 }

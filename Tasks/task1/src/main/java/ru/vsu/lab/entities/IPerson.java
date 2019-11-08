@@ -1,5 +1,6 @@
 package ru.vsu.lab.entities;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 import ru.vsu.lab.entities.enums.Gender;
@@ -31,6 +32,10 @@ public interface IPerson {
 	public IDivision getDivision();
 	
 	public void setDivision(IDivision division);
+	
+	public BigDecimal getSalary();
+	
+	public void setSalary(BigDecimal salary);
 	
 	
 
