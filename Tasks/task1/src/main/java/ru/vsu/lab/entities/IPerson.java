@@ -13,15 +13,15 @@ public interface IPerson {
 	
 	public String getFirstName();
 	
-	public String setFirstName(String firstName);
+	public void setFirstName(String firstName);
 	
 	public String getLastName();
 	
-	public String setLastName(String firstName);
+	public void setLastName(String firstName);
 	
 	public LocalDate getBirthdate();
 	
-	public LocalDate setBirthdate(LocalDate birthdate);
+	public void setBirthdate(LocalDate birthdate);
 	
 	public Integer getAge();
 	
