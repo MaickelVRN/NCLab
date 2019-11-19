@@ -6,24 +6,30 @@ import java.util.function.Predicate;
 
 import ru.vsu.lab.entities.IPerson;
 
-public interface IRepository {
+/**
+ * Generic repository
+ * If currently you don't know how to work with generic use {@link IPersonRepository}
+ *
+ * 
+ */
+public interface IRepository<T> {
 	
-	public void add(IPerson person);
+	public void add(T person);
 	
-	public IPerson get(int index);
+	public T get(int index);
 	
-	public IPerson delete(int index);
+	public T delete(int index);
 
-	public IPerson set(int index, IPerson person);
+	public T set(int index, T person);
 	
-	public void add(int index, IPerson person);
+	public void add(int index, T person);
 	
-	public List<IPerson> toList();
-	
-	//Should not use toList method
-	public void sortBy(Comparator<IPerson> comparator );
+	public List<T> toList();
 	
 	//Should not use toList method
-	public IRepository searchBy(Predicate<IPerson> condition);
+	public void sortBy(Comparator<T> comparator );
+	
+	//Should not use toList method
+	public IRepository<T> searchBy(Predicate<T> condition);
 	
 }
